@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/llToday"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dip">
+
+        <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Погода в Дмитрове" android:layout_marginTop="5dp" android:layout_marginLeft="10dp"
+                tools:textColor="?android:attr/colorActivatedHighlight"/>
+
+        <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/llForecast"
+            android:layout_width="319dp"
+            android:layout_height="196dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="137dp"
+            tools:ignore="UnknownId" android:layout_centerHorizontal="true">
+    </LinearLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get"
+            android:onClick="getWeather"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="67dp" android:layout_alignTop="@+id/buttonHist"/>
+    <TextView
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/descript" android:fontFamily="cursive" android:textSize="36sp"
+            android:layout_centerHorizontal="true" android:layout_marginTop="125dp"/>
+    <Button
+            android:text="History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonHist"
+            android:layout_alignEnd="@+id/descript"
+            android:layout_alignParentBottom="true"
+            android:onClick="showHistory"
+            android:layout_marginBottom="33dp"/>
+</RelativeLayout>
